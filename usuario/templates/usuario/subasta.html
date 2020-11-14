@@ -1,0 +1,55 @@
+{% extends 'usuario/main.html' %}
+
+{% block content %}
+
+<br>
+
+<div class="row">
+    <div class="col-md">
+        <div class="card card-body">
+            <h5>Products</h5>
+        </div>
+        <div class="card card-body">
+            <table class="table">
+                <tr>
+                    <th>Marca </th>
+                    <th>Color</th>
+                    <th>Kilometraje</th> 
+                    <th>Tipo de combustible</th> 
+                    <th>Estado del vehículo</th> 
+                    <th>Proveedor</th> 
+                    <th>Precio inicial</th> 
+                    <th>Precio inicial</th> 
+                    
+                </tr>
+                {% for i in vehiculo %}
+                    <tr>
+                        <td>{{ i.marca }}</td>
+                        <td>{{ i.color }}</td>
+                        <td>{{ i.kilometraje }}</td>
+                        <td>{{ i.combustible_vehiculo}}</td>
+                        <td>{{ i.categoria}}</td>
+                        <td>{{ i.proveedor}}</td>
+                        <td>{{ i.precio}}</td>
+                        <td></td>
+                    </tr>
+                {% endfor %}
+                                  
+            </table>
+            <table class="table" >
+                <tr>
+                    <td>Puja</td>
+                    <td>Precio actual</td>
+                </tr>
+                <tr >
+
+                </tr>
+            </table>
+        </div>
+    </div>
+    
+</div>
+            
+{% endblock %}
+
+            
